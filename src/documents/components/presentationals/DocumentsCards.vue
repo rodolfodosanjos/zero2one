@@ -2,7 +2,17 @@
   <v-container
     grid-list-md
     text-xs-center>
+    <div
+      v-if="isLoading"
+      class="text-xs-center">
+      <v-progress-circular
+        :size="50"
+        color="primary"
+        indeterminate>
+      </v-progress-circular>
+    </div>
     <v-layout
+      v-if="!isLoading"
       row
       align-center
       justify-center
@@ -27,6 +37,10 @@
       documents: {
         required: true,
         type: Array
+      },
+      isLoading: {
+        required: true,
+        type: Boolean
       },
       refresh: {
         required: true,

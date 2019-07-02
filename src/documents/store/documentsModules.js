@@ -1,0 +1,1 @@
+export const DOCUMENTS_MODULE = 'DOCUMENTS_MODULE'

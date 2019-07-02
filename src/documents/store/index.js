@@ -4,7 +4,11 @@ import mutations from '@/documents/mutations'
 export default {
   namespaced: true,
   state: {
-    documents: []
+    documents: {
+      isLoading: false,
+      items: [],
+      error: undefined
+    }
   },
   actions,
   mutations
