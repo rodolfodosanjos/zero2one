@@ -1,14 +1,14 @@
 <template>
-	<documents-container />
+  <DocumentsContainer />
 </template>
 
 <script>
-import DocumentsContainer from '@/documents/components/containers/DocumentsContainer';
+  import DocumentsContainer from '@/documents/components/containers/DocumentsContainer'
 
-export default {
-	name: 'DocumentsPage',
-	components: {
-		DocumentsContainer
-	}
-};
+  export default {
+    name: 'DocumentsPage',
+    components: {
+      DocumentsContainer
+    }
+  }
 </script>

@@ -1,9 +1,14 @@
 <template>
-	<span>Olá Mundo</span>
+  <Documents />
 </template>
 
 <script>
-export default {
-	name: 'DocumentsContainer'
-};
+  import Documents from '@/documents/components/presentationals/Documents'
+
+  export default {
+    name: 'DocumentsContainer',
+    components: {
+      Documents
+    }
+  }
 </script>
