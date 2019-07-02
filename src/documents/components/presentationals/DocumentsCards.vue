@@ -8,14 +8,11 @@
       justify-center
       fill-height>
       <v-flex
+        v-for="document in documents"
         align-self-center
         xs12 sm6 lg3>
-        <DocumentCard />
-      </v-flex>
-      <v-flex
-        align-self-center
-        xs12 sm6 lg3>
-        <DocumentCard />
+        <DocumentCard
+          :document="document" />
       </v-flex>
     </v-layout>
   </v-container>
@@ -25,9 +22,22 @@
   import DocumentCard from '@/documents/components/presentationals/DocumentCard'
 
   export default {
-    name: 'Documents',
+    name: 'DocumentsCards',
+    props: {
+      documents: {
+        required: true,
+        type: Array
+      },
+      refresh: {
+        required: true,
+        type: Function
+      }
+    },
     components: {
       DocumentCard
+    },
+    created() {
+      this.refresh();
     }
   }
 </script>
