@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <logo />
+        <logo class="mt-1"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>

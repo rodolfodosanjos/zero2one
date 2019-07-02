@@ -1,14 +1,14 @@
 <template>
-  <Documents />
+  <DocumentsCards />
 </template>
 
 <script>
-  import Documents from '@/documents/components/presentationals/Documents'
+  import DocumentsCards from '@/documents/components/presentationals/DocumentsCards'
 
   export default {
     name: 'DocumentsContainer',
     components: {
-      Documents
+      DocumentsCards
     }
   }
 </script>
