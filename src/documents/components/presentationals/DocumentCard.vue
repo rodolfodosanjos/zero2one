@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-img
-      :src="document.url"
+      :src="document.imgUrl"
       aspect-ratio="2.75"
     ></v-img>
 
