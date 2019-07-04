@@ -8,9 +8,17 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/messages',
+      name: 'MessagesPage',
+      component: () => import('@/messages/pages/MessagesPage'),
+    }, {
+      path: '/documents',
       name: 'DocumentsPage',
       component: () => import('@/documents/pages/DocumentsPage'),
+    }, {
+      path: '/user',
+      name: 'UserPage',
+      component: () => import('@/user/pages/UserPage'),
     }
   ],
 });

@@ -8,19 +8,17 @@
     </v-toolbar>
 
     <v-content>
-      <DocumentsPage />
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import DocumentsPage from '@/documents/pages/DocumentsPage';
 import Logo from '@/commons/components/presentationals/Logo';
 
 export default {
   name: 'App',
   components: {
-    DocumentsPage,
     Logo
   },
 };

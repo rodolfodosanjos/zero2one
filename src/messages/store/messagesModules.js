@@ -1,0 +1,1 @@
+export const MESSAGES_MODULE = 'MESSAGES_MODULE'
