@@ -1,13 +1,14 @@
 <template>
   <DocumentsCards
     :documents="documents"
+    :download="download"
     :isLoading="isLoading"
     :refresh="refresh" />
 </template>
 
 <script>
   import { mapActions, mapState } from 'vuex'
-  import { GET_DOCUMENTS } from '@/documents/actions/documentActionTypes'
+  import { GET_DOCUMENTS, DOWNLOAD_DOCUMENT } from '@/documents/actions/documentActionTypes'
   import { DOCUMENTS_MODULE } from '@/documents/store/documentsModules'
   import DocumentsCards from '@/documents/components/presentationals/DocumentsCards'
 
@@ -24,7 +25,8 @@
     },
     methods: {
       ...mapActions(DOCUMENTS_MODULE, {
-        refresh: GET_DOCUMENTS
+        refresh: GET_DOCUMENTS,
+        download: DOWNLOAD_DOCUMENT
       })
     }
   }

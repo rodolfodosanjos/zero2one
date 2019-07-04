@@ -15,10 +15,8 @@
     <v-card-actions>
       <v-btn
         flat
-        color="primary">Share</v-btn>
-      <v-btn
-        flat
-        color="primary">Explore</v-btn>
+        @click="download(document)"
+        color="primary">Baixar</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -30,6 +28,10 @@
       document: {
         required: true,
         type: Object
+      },
+      download: {
+        required: true,
+        type: Function
       }
     }
   }
