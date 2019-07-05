@@ -1,5 +1,7 @@
 # zero2one-frontend
 
+Just started the project, still have to config testing and deployment structure
+
 ## Project setup
 ```
 npm install
