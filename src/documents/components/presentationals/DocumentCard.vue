@@ -21,17 +21,17 @@
 </template>
 
 <script>
-export default {
-  name: 'DocumentCard',
-  props: {
-    document: {
-      required: true,
-      type: Object,
+  export default {
+    name: 'DocumentCard',
+    props: {
+      document: {
+        required: true,
+        type: Object,
+      },
+      download: {
+        required: true,
+        type: Function,
+      },
     },
-    download: {
-      required: true,
-      type: Function,
-    },
-  },
-};
+  }
 </script>

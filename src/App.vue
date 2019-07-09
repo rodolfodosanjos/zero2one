@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import Logo from '@/commons/components/presentationals/Logo';
+  import Logo from '@/commons/components/presentationals/Logo'
 
-export default {
-  name: 'App',
-  components: {
-    Logo
-  },
-};
+  export default {
+    name: 'App',
+    components: {
+      Logo
+    },
+  }
 </script>

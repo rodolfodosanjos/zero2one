@@ -30,33 +30,33 @@
 </template>
 
 <script>
-import DocumentCard from '@/documents/components/presentationals/DocumentCard';
+  import DocumentCard from '@/documents/components/presentationals/DocumentCard'
 
-export default {
-  name: 'DocumentsCards',
-  props: {
-    documents: {
-      required: true,
-      type: Array,
+  export default {
+    name: 'DocumentsCards',
+    props: {
+      documents: {
+        required: true,
+        type: Array,
+      },
+      isLoading: {
+        required: true,
+        type: Boolean,
+      },
+      refresh: {
+        required: true,
+        type: Function,
+      },
+      download: {
+        required: true,
+        type: Function,
+      },
     },
-    isLoading: {
-      required: true,
-      type: Boolean,
+    components: {
+      DocumentCard,
     },
-    refresh: {
-      required: true,
-      type: Function,
+    created() {
+      this.refresh();
     },
-    download: {
-      required: true,
-      type: Function,
-    },
-  },
-  components: {
-    DocumentCard,
-  },
-  created() {
-    this.refresh();
-  },
-};
+  }
 </script>

@@ -32,7 +32,7 @@
   import MessageListItem from '@/messages/components/presentationals/MessageListItem'
 
   export default {
-    name: 'DocumentsCards',
+    name: 'MessagesCards',
     props: {
       messages: {
         required: true,
