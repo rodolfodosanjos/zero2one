@@ -8,8 +8,7 @@
       <v-progress-circular
         :size="50"
         color="primary"
-        indeterminate>
-      </v-progress-circular>
+        indeterminate />
     </div>
     <v-layout
       v-if="!isLoading"
@@ -31,33 +30,33 @@
 </template>
 
 <script>
-  import DocumentCard from '@/documents/components/presentationals/DocumentCard'
+import DocumentCard from '@/documents/components/presentationals/DocumentCard';
 
-  export default {
-    name: 'DocumentsCards',
-    props: {
-      documents: {
-        required: true,
-        type: Array
-      },
-      isLoading: {
-        required: true,
-        type: Boolean
-      },
-      refresh: {
-        required: true,
-        type: Function
-      },
-      download: {
-        required: true,
-        type: Function
-      }
+export default {
+  name: 'DocumentsCards',
+  props: {
+    documents: {
+      required: true,
+      type: Array,
     },
-    components: {
-      DocumentCard
+    isLoading: {
+      required: true,
+      type: Boolean,
     },
-    created() {
-      this.refresh();
-    }
-  }
+    refresh: {
+      required: true,
+      type: Function,
+    },
+    download: {
+      required: true,
+      type: Function,
+    },
+  },
+  components: {
+    DocumentCard,
+  },
+  created() {
+    this.refresh();
+  },
+};
 </script>

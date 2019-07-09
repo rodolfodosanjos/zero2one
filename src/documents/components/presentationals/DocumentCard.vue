@@ -2,8 +2,7 @@
   <v-card>
     <v-img
       :src="document.imgUrl"
-      aspect-ratio="2.75"
-    ></v-img>
+      aspect-ratio="2.75" />
 
     <v-card-title primary-title>
       <div>
@@ -22,17 +21,17 @@
 </template>
 
 <script>
-  export default {
-    name: 'DocumentCard',
-    props: {
-      document: {
-        required: true,
-        type: Object
-      },
-      download: {
-        required: true,
-        type: Function
-      }
-    }
-  }
+export default {
+  name: 'DocumentCard',
+  props: {
+    document: {
+      required: true,
+      type: Object,
+    },
+    download: {
+      required: true,
+      type: Function,
+    },
+  },
+};
 </script>
