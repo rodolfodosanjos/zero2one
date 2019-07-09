@@ -4,7 +4,7 @@ import UserPage from './UserPage'
 describe('UserPage', () => {
   const createComponent = () => shallowMount(UserPage)
 
-  it('should render normally', () => {
+  it('should not crash', () => {
     createComponent();
 
     expect(true).toBe(true)

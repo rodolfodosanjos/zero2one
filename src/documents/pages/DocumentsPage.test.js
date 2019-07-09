@@ -4,7 +4,7 @@ import DocumentsPage from './DocumentsPage';
 describe('DocumentsPage', () => {
   const createComponent = () => shallowMount(DocumentsPage);
 
-  it('should render normally', () => {
+  it('should not crash', () => {
     createComponent();
 
     expect(true).toBe(true)

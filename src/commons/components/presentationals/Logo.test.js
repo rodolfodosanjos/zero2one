@@ -4,7 +4,7 @@ import Logo from './Logo'
 describe('Logo', () => {
   const createComponent = () => shallowMount(Logo)
 
-  it('should render normally', () => {
+  it('should not crash', () => {
     createComponent()
 
     expect(true).toBe(true)

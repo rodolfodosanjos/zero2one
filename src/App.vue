@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <logo class="ma-1" />
+        <Logo class="ma-1" />
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -20,6 +20,6 @@
     name: 'App',
     components: {
       Logo
-    },
+    }
   }
 </script>

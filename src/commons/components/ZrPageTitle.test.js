@@ -4,7 +4,7 @@ import ZrPageTitle from './ZrPageTitle'
 describe('ZrPageTitle', () => {
   const createComponent = () => shallowMount(ZrPageTitle)
 
-  it('should render normally', () => {
+  it('should not crash', () => {
     createComponent()
 
     expect(true).toBe(true)

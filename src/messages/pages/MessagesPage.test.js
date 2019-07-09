@@ -4,7 +4,7 @@ import MessagesPage from './MessagesPage'
 describe('MessagesPage', () => {
   const createComponent = () => shallowMount(MessagesPage)
 
-  it('should render normally', () => {
+  it('should not crash', () => {
     createComponent()
 
     expect(true).toBe(true)
