@@ -2,8 +2,19 @@
   <v-container
     grid-list-md
     text-xs-center>
-    <ZrPageTitle>{{user.name}}</ZrPageTitle>
-    <div class="font-weight-thin title text-lg-center mb-2 text-uppercase">{{user.profile.name}}</div>
+    <div
+      v-if="isLoading"
+      class="text-xs-center">
+      <v-progress-circular
+        :size="50"
+        color="primary"
+        indeterminate>
+      </v-progress-circular>
+    </div>
+    <div v-if="!isLoading">
+      <ZrPageTitle>{{user.name}}</ZrPageTitle>
+      <div class="font-weight-thin title text-lg-center mb-2 text-uppercase">{{user.profile.name}}</div>
+    </div>
   </v-container>
 </template>
 
