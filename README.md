@@ -1,6 +1,6 @@
 # zero2one-frontend
 
-Just started the project, still have to config testing and deployment structure
+Just started the project, still have to create tests and config deployment structure
 
 ## Project setup
 ```
