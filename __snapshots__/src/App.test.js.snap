@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<v-app-stub id="app">
+  <v-toolbar-stub app="true" scrollthreshold="300">
+    <v-toolbar-title-stub class="headline text-uppercase">
+      <logo-stub class="ma-1"></logo-stub>
+    </v-toolbar-title-stub>
+    <v-spacer-stub></v-spacer-stub>
+  </v-toolbar-stub>
+  <v-content-stub tag="main">
+    <router-view-stub></router-view-stub>
+  </v-content-stub>
+</v-app-stub>
+`;

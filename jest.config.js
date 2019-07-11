@@ -16,6 +16,7 @@ module.exports = {
   snapshotSerializers: [
     'jest-serializer-vue'
   ],
+  snapshotResolver: './snapshotResolver.js',
   testMatch: [
     '<rootDir>/src/**/*.test.(js|jsx|ts|tsx)'
   ],

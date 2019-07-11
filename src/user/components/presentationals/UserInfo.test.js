@@ -6,6 +6,16 @@ describe('UserInfo', () => {
     propsData: props
   })
 
+  it('should match snapshot', () => {
+    expect(createComponent({
+      user: {
+        profile: {}
+      },
+      isLoading: false,
+      refresh: jest.fn()
+    })).toMatchSnapshot()
+  })
+
   it('should show loading then hide it and show user info', () => {
     const fakeUser = {
       name: 'fake 1',

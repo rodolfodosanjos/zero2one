@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPage should match snapshot 1`] = `
+<div>
+  <v-container-stub tag="div">
+    <userinfocontainer-stub></userinfocontainer-stub>
+  </v-container-stub>
+</div>
+`;

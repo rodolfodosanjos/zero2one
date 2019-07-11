@@ -4,10 +4,8 @@ import DocumentsPage from './DocumentsPage'
 describe('DocumentsPage', () => {
   const createComponent = () => shallowMount(DocumentsPage)
 
-  it('should not crash', () => {
-    createComponent()
-
-    expect(true).toBe(true)
+  it('should match snapshot', () => {
+    expect(createComponent()).toMatchSnapshot()
   })
 
 })

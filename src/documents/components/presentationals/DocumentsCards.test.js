@@ -6,6 +6,15 @@ describe('DocumentsCards', () => {
     propsData: props
   })
 
+  it('should match snapshot', () => {
+    expect(createComponent({
+      documents: [],
+      isLoading: false,
+      refresh: jest.fn(),
+      download: jest.fn()
+    })).toMatchSnapshot()
+  })
+
   it('should show loading then hide it and show documents', () => {
     const fakeDocument1 = {
       name: 'fake 1'

@@ -7,10 +7,8 @@ describe('App', () => {
       stubs: [ 'router-view' ]
     })
 
-  it('should not crash', () => {
-    createComponent()
-
-    expect(true).toBe(true)
+  it('should match snapshot', () => {
+    expect(createComponent()).toMatchSnapshot()
   })
 
 })

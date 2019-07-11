@@ -4,10 +4,8 @@ import UserPage from './UserPage'
 describe('UserPage', () => {
   const createComponent = () => shallowMount(UserPage)
 
-  it('should not crash', () => {
-    createComponent()
-
-    expect(true).toBe(true)
+  it('should match snapshot', () => {
+    expect(createComponent()).toMatchSnapshot()
   })
 
 })

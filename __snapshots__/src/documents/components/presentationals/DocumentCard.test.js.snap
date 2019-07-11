@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentCard should match snapshot 1`] = `
+<div class="v-card v-sheet theme--light">
+  <div class="v-responsive v-image">
+    <div class="v-responsive__sizer" style="padding-bottom: 36.36363636363637%;"></div>
+    <div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;" name="fade-transition" mode="in-out"></div>
+    <div class="v-responsive__content"></div>
+  </div>
+  <div class="v-card__title v-card__title--primary">
+    <div>
+      <h3 class="headline mb-0">fake 1</h3>
+      <div>fake description</div>
+    </div>
+  </div>
+  <div class="v-card__actions"><button type="button" class="v-btn v-btn--flat theme--light primary--text">
+      <div class="v-btn__content">Baixar</div>
+    </button></div>
+</div>
+`;

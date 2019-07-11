@@ -4,10 +4,8 @@ import Logo from './Logo'
 describe('Logo', () => {
   const createComponent = () => shallowMount(Logo)
 
-  it('should not crash', () => {
-    createComponent()
-
-    expect(true).toBe(true)
+  it('should match snapshot', () => {
+    expect(createComponent()).toMatchSnapshot()
   })
 
 })

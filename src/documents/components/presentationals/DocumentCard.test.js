@@ -12,6 +12,13 @@ describe('DocumentCard', () => {
     imgUrl: 'fakeurl.jpg'
   }
 
+  it('should match snapshot', () => {
+    expect(createComponent({
+      document: fakeDocument,
+      download: jest.fn()
+    })).toMatchSnapshot()
+  })
+
   it('should show all infos', () => {
     const wrapper = createComponent({
       document: fakeDocument,

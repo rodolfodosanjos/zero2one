@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentsCards should match snapshot 1`] = `
+<v-container-stub tag="div" grid-list-md="" text-xs-center="">
+  <!---->
+  <v-layout-stub tag="div" row="" align-center="" justify-center="" fill-height=""></v-layout-stub>
+</v-container-stub>
+`;
