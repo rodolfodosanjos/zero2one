@@ -8,14 +8,14 @@
 </template>
 
 <script>
-  import ZrPageTitle from '@/commons/components/ZrPageTitle'
-  import DocumentsContainer from '@/documents/components/containers/DocumentsContainer'
+import ZrPageTitle from '@/commons/components/ZrPageTitle'
+import DocumentsContainer from '@/documents/components/containers/DocumentsContainer'
 
-  export default {
-    name: 'DocumentsPage',
-    components: {
-      DocumentsContainer,
-      ZrPageTitle
-    }
+export default {
+  name: 'DocumentsPage',
+  components: {
+    DocumentsContainer,
+    ZrPageTitle
   }
+}
 </script>

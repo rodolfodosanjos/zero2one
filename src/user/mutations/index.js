@@ -1,7 +1,7 @@
-import { STARTED_REFRESH_USER, FINISHED_REFRESH_USER, FAILED_REFRESH_USER } from '@/user/mutations/userMutationTypes'
+import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/user/mutations/userMutationTypes'
 
 export default {
-  [STARTED_REFRESH_USER] (state, user) {
+  [STARTED_REFRESH_USER] (state) {
     state.user = {
       isLoading: true,
       item: {

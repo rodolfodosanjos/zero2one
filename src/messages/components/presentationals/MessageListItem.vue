@@ -16,13 +16,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'MessageListItem',
-    props: {
-      message: {
-        required: true,
-        type: Object
-      }
+export default {
+  name: 'MessageListItem',
+  props: {
+    message: {
+      required: true,
+      type: Object
     }
   }
+}
 </script>

@@ -3,7 +3,7 @@ import UserInfo from './UserInfo'
 
 describe('UserInfo', () => {
   const createComponent = props => shallowMount(UserInfo, {
-    propsData: props,
+    propsData: props
   })
 
   it('should show loading then hide it and show user info', () => {
@@ -33,8 +33,6 @@ describe('UserInfo', () => {
 
     wrapper.setProps({ isLoading: false })
     wrapper.setProps({ user: fakeUser })
-
-    const $documents = wrapper.findAll({ name: 'DocumentCard' })
 
     expect(wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
     expect(wrapper.text()).toContain(fakeUser.name)

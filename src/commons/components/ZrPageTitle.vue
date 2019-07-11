@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'ZrPageTitle'
-  }
+export default {
+  name: 'ZrPageTitle'
+}
 </script>

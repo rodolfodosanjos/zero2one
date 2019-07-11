@@ -29,29 +29,29 @@
 </template>
 
 <script>
-  import MessageListItem from '@/messages/components/presentationals/MessageListItem'
+import MessageListItem from '@/messages/components/presentationals/MessageListItem'
 
-  export default {
-    name: 'MessagesCards',
-    props: {
-      messages: {
-        required: true,
-        type: Array
-      },
-      isLoading: {
-        required: true,
-        type: Boolean
-      },
-      refresh: {
-        required: true,
-        type: Function
-      }
+export default {
+  name: 'MessagesCards',
+  props: {
+    messages: {
+      required: true,
+      type: Array
     },
-    components: {
-      MessageListItem
+    isLoading: {
+      required: true,
+      type: Boolean
     },
-    created() {
-      this.refresh();
+    refresh: {
+      required: true,
+      type: Function
     }
+  },
+  components: {
+    MessageListItem
+  },
+  created() {
+    this.refresh()
   }
+}
 </script>

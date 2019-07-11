@@ -5,7 +5,7 @@ describe('UserPage', () => {
   const createComponent = () => shallowMount(UserPage)
 
   it('should not crash', () => {
-    createComponent();
+    createComponent()
 
     expect(true).toBe(true)
   })

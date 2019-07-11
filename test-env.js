@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/dist/vuetify';
+import Vue from 'vue'
+import Vuetify from 'vuetify/dist/vuetify'
 
-Vue.use(Vuetify);
+Vue.use(Vuetify)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false

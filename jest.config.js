@@ -3,32 +3,32 @@ module.exports = {
     'js',
     'jsx',
     'json',
-    'vue',
+    'vue'
   ],
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '^.+\\.js$': 'babel-jest',
-    '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
+    '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub'
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/src/$1'
   },
   snapshotSerializers: [
-    'jest-serializer-vue',
+    'jest-serializer-vue'
   ],
   testMatch: [
-    '<rootDir>/src/**/*.test.(js|jsx|ts|tsx)',
+    '<rootDir>/src/**/*.test.(js|jsx|ts|tsx)'
   ],
   testURL: 'http://localhost/',
-  setupFiles: ['./test-env.js'],
+  setupFiles: [ './test-env.js' ],
   watchPlugins: [
     'jest-watch-typeahead/filename',
-    'jest-watch-typeahead/testname',
+    'jest-watch-typeahead/testname'
   ],
   collectCoverage: true,
   coverageThreshold: {},
   collectCoverageFrom: [
     'src/**/*.(js|vue)',
-    '!**/node_modules/**',
-  ],
-};
+    '!**/node_modules/**'
+  ]
+}

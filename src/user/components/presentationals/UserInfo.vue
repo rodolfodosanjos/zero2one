@@ -19,29 +19,29 @@
 </template>
 
 <script>
-  import ZrPageTitle from '@/commons/components/ZrPageTitle'
+import ZrPageTitle from '@/commons/components/ZrPageTitle'
 
-  export default {
-    name: 'UserInfo',
-    props: {
-      user: {
-        required: true,
-        type: Object
-      },
-      isLoading: {
-        required: true,
-        type: Boolean
-      },
-      refresh: {
-        required: true,
-        type: Function
-      }
+export default {
+  name: 'UserInfo',
+  props: {
+    user: {
+      required: true,
+      type: Object
     },
-    components: {
-      ZrPageTitle
+    isLoading: {
+      required: true,
+      type: Boolean
     },
-    created() {
-      this.refresh();
+    refresh: {
+      required: true,
+      type: Function
     }
+  },
+  components: {
+    ZrPageTitle
+  },
+  created() {
+    this.refresh()
   }
+}
 </script>

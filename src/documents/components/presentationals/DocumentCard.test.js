@@ -3,31 +3,31 @@ import DocumentCard from './DocumentCard'
 
 describe('DocumentCard', () => {
   const createComponent = props => mount(DocumentCard, {
-    propsData: props,
+    propsData: props
   })
 
   const fakeDocument = {
     name: 'fake 1',
     description: 'fake description',
-    imgUrl: 'fakeurl.jpg',
+    imgUrl: 'fakeurl.jpg'
   }
 
   it('should show all infos', () => {
     const wrapper = createComponent({
       document: fakeDocument,
-      download: jest.fn(),
+      download: jest.fn()
     })
 
     expect(wrapper.text()).toContain(fakeDocument.name)
     expect(wrapper.text()).toContain(fakeDocument.description)
     expect(wrapper.find({ name: 'v-img' }).props('src')).toBe(fakeDocument.imgUrl)
-  });
+  })
 
   it('should download document on button click', () => {
-    const download = jest.fn();
+    const download = jest.fn()
     const wrapper = createComponent({
       document: fakeDocument,
-      download,
+      download
     })
     wrapper.find('button').trigger('click')
 

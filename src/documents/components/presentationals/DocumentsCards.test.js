@@ -3,28 +3,28 @@ import DocumentsCards from './DocumentsCards'
 
 describe('DocumentsCards', () => {
   const createComponent = props => shallowMount(DocumentsCards, {
-    propsData: props,
+    propsData: props
   })
 
   it('should show loading then hide it and show documents', () => {
     const fakeDocument1 = {
-      name: 'fake 1',
-    };
+      name: 'fake 1'
+    }
     const fakeDocument2 = {
-      name: 'fake 2',
-    };
-    const documents = [];
-    const refresh = jest.fn();
-    const download = jest.fn();
+      name: 'fake 2'
+    }
+    const documents = []
+    const refresh = jest.fn()
+    const download = jest.fn()
 
     const wrapper = createComponent({
       documents,
       isLoading: false,
       refresh,
-      download,
+      download
     })
 
-    expect(refresh.mock.calls.length).toBe(1);
+    expect(refresh.mock.calls.length).toBe(1)
 
     wrapper.setProps({ isLoading: true })
 
