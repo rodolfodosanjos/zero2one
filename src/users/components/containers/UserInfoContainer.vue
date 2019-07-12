@@ -7,12 +7,12 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-import { GET_USER } from '@/user/actions/userActionTypes'
-import { USERS_MODULE } from '@/user/store/usersModules'
-import UserInfo from '@/user/components/presentationals/UserInfo'
+import { GET_USER } from '@/users/actions/userActionTypes'
+import { USERS_MODULE } from '@/users/store/usersModules'
+import UserInfo from '@/users/components/presentationals/UserInfo'
 
 export default {
-  name: 'DocumentsContainer',
+  name: 'UserInfoContainer',
   components: {
     UserInfo
   },

@@ -1,29 +1,23 @@
 import { saveAs } from 'file-saver'
 import { DOWNLOAD_DOCUMENT, GET_DOCUMENTS } from '@/documents/actions/documentActionTypes'
-import { FINISHED_REFRESH_DOCUMENTS, STARTED_REFRESH_DOCUMENTS } from '@/documents/mutations/documentMutationTypes'
-
-const exampleDocs = [ {
-  id: 1,
-  name: 'example doc 1',
-  fileName: 'doc.jpg',
-  description: 'example doc 1 taken from Google Images to use as an example',
-  imgUrl: 'https://www.imtrecruitment.org.uk/file/image/media/5bb20b3de5260_Evidence_of_founation_competence_signatory_guide_screenshot.JPG',
-  url: 'https://www.imtrecruitment.org.uk/file/image/media/5bb20b3de5260_Evidence_of_founation_competence_signatory_guide_screenshot.JPG'
-}, {
-  id: 2,
-  name: 'example doc 2',
-  fileName: 'doc2.jpg',
-  description: 'example doc 2 taken from Google Images to use as an example',
-  imgUrl: 'https://data2.unhcr.org/images/documents/big_bc0b4d5fb6ee8dce463f75add75aeee8e1f9acff.jpg',
-  url: 'https://data2.unhcr.org/images/documents/big_bc0b4d5fb6ee8dce463f75add75aeee8e1f9acff.jpg'
-} ]
+import { FAILED_REFRESH_DOCUMENTS, FINISHED_REFRESH_DOCUMENTS, STARTED_REFRESH_DOCUMENTS } from '@/documents/mutations/documentMutationTypes'
+import documentsResource from '@/documents/resources/documentsResource'
 
 export default {
-  [GET_DOCUMENTS] ({ commit }) {
-    commit(STARTED_REFRESH_DOCUMENTS)
-    return window.setTimeout(() => commit(FINISHED_REFRESH_DOCUMENTS, exampleDocs), 2000)
-  },
-  [DOWNLOAD_DOCUMENT] (arg, document) {
+  [GET_DOCUMENTS]: ({ commit }) =>
+    new Promise((resolve, reject) => {
+      commit(STARTED_REFRESH_DOCUMENTS)
+      documentsResource.getAll()
+        .then(items => {
+          commit(FINISHED_REFRESH_DOCUMENTS, items)
+          resolve(items)
+        })
+        .catch(error => {
+          commit(FAILED_REFRESH_DOCUMENTS, error)
+          reject(error)
+        })
+    })
+  ,
+  [DOWNLOAD_DOCUMENT]: (arg, document) =>
     saveAs(document.url, document.fileName)
-  }
 }

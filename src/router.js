@@ -18,7 +18,7 @@ export default new Router({
     }, {
       path: '/user',
       name: 'UserPage',
-      component: () => import('@/user/pages/UserPage')
+      component: () => import('@/users/pages/UserPage')
     }
   ]
 })

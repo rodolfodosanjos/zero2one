@@ -1,21 +1,21 @@
-import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/user/mutations/userMutationTypes'
+import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/userMutationTypes'
 
 export default {
-  [STARTED_REFRESH_USER] (state) {
+  [STARTED_REFRESH_USER]: state =>
     state.user = {
       isLoading: true,
       item: {
         profile: {}
       }
     }
-  },
-  [FINISHED_REFRESH_USER] (state, user) {
+  ,
+  [FINISHED_REFRESH_USER]: (state, user) =>
     state.user = {
       isLoading: false,
       item: user
     }
-  },
-  [FAILED_REFRESH_USER] (state, error) {
+  ,
+  [FAILED_REFRESH_USER]: (state, error) =>
     state.user = {
       isLoading: false,
       item: {
@@ -23,5 +23,4 @@ export default {
       },
       error
     }
-  }
 }

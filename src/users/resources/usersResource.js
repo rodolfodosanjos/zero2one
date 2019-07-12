@@ -1,6 +1,4 @@
-import { GET_USER } from '@/user/actions/userActionTypes'
-import profiles from '@/user/constants/profiles'
-import { FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/user/mutations/userMutationTypes'
+import profiles from '@/users/constants/profiles'
 
 const exampleUser = {
   id: 1,
@@ -14,8 +12,6 @@ const exampleUser = {
 }
 
 export default {
-  [GET_USER] ({ commit }) {
-    commit(STARTED_REFRESH_USER)
-    return window.setTimeout(() => commit(FINISHED_REFRESH_USER, exampleUser), 2000)
-  }
+  get: () =>
+    new Promise(resolve => window.setTimeout(() => resolve(exampleUser), 2000))
 }

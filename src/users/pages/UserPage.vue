@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import UserInfoContainer from '@/user/components/containers/UserInfoContainer'
+import UserInfoContainer from '@/users/components/containers/UserInfoContainer'
 
 export default {
   name: 'UserPage',
