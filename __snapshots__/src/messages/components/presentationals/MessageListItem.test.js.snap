@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageListItem should match snapshot 1`] = `
+<div>
+  <div role="listitem">
+    <div class="v-list__tile v-list__tile--avatar theme--light">
+      <div class="v-list__tile__avatar">
+        <div class="v-avatar" style="height: 40px; width: 40px;">
+          <div class="v-responsive v-image">
+            <div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;" name="fade-transition" mode="in-out"></div>
+            <div class="v-responsive__content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="v-list__tile__content">
+        <div class="v-list__tile__title">fake title</div>
+        <div class="v-list__tile__sub-title">fake message</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
