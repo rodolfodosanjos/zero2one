@@ -1,5 +1,5 @@
-import actions from '@/user/actions'
-import mutations from '@/user/mutations'
+import actions from '@/users/actions'
+import mutations from '@/users/mutations'
 
 export default {
   namespaced: true,
