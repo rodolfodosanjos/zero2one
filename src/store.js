@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import DocumentsStore from '@/documents/store'
 import MessagesStore from '@/messages/store'
-import UserStore from '@/user/store'
+import UserStore from '@/users/store'
 import { DOCUMENTS_MODULE } from '@/documents/store/documentsModules'
 import { MESSAGES_MODULE } from '@/messages/store/messagesModules'
-import { USERS_MODULE } from '@/user/store/usersModules'
+import { USERS_MODULE } from '@/users/store/usersModules'
 
 Vue.use(Vuex)
 
