@@ -7,7 +7,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-import { GET_USER } from '@/users/actions/userActionTypes'
+import { GET_USER } from '@/users/actions/usersActionTypes'
 import { USERS_MODULE } from '@/users/store/usersModules'
 import UserInfo from '@/users/components/presentationals/UserInfo'
 

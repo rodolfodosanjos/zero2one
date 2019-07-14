@@ -1,4 +1,4 @@
-import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/userMutationTypes'
+import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/usersMutationTypes'
 
 export default {
   [STARTED_REFRESH_USER]: state =>

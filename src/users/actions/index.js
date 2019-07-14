@@ -1,5 +1,5 @@
-import { GET_USER } from '@/users/actions/userActionTypes'
-import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/userMutationTypes'
+import { GET_USER } from '@/users/actions/usersActionTypes'
+import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/usersMutationTypes'
 import usersResource from '@/users/resources/usersResource'
 
 export default {

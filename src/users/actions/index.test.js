@@ -1,5 +1,5 @@
-import { GET_USER } from '@/users/actions/userActionTypes'
-import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/userMutationTypes'
+import { GET_USER } from '@/users/actions/usersActionTypes'
+import { FAILED_REFRESH_USER, FINISHED_REFRESH_USER, STARTED_REFRESH_USER } from '@/users/mutations/usersMutationTypes'
 import actions from './index.js'
 
 jest.mock('@/users/resources/usersResource', () => ({}))

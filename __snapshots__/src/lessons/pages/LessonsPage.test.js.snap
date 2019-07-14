@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LessonsPage should match snapshot 1`] = `
+<div>
+  <v-container-stub tag="div">
+    <zrpagetitle-stub>Aulas</zrpagetitle-stub>
+    <lessonscontainer-stub></lessonscontainer-stub>
+  </v-container-stub>
+</div>
+`;
