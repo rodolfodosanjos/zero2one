@@ -44,7 +44,7 @@ export default {
       type: Boolean
     },
     refresh: {
-      required: true,
+      required: false,
       type: Function
     },
     download: {
@@ -56,7 +56,9 @@ export default {
     DocumentCard
   },
   created() {
-    this.refresh()
+    if (this.refresh) {
+      this.refresh()
+    }
   }
 }
 </script>

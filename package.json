@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint --fix",
     "start": "npm run serve",
     "test": "vue-cli-service test:unit",
-    "update-snapshot": "npm test -- -u"
+    "update-snapshots": "npm test -- -u"
   },
   "dependencies": {
     "core-js": "^3.1.4",

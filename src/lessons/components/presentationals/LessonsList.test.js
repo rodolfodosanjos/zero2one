@@ -24,7 +24,7 @@ describe('LessonsList', () => {
     const lessons = []
     const refresh = jest.fn()
 
-    const wrapper = createComponent({
+    const $wrapper = createComponent({
       lessons,
       isLoading: false,
       refresh
@@ -32,17 +32,17 @@ describe('LessonsList', () => {
 
     expect(refresh.mock.calls.length).toBe(1)
 
-    wrapper.setProps({ isLoading: true })
+    $wrapper.setProps({ isLoading: true })
 
-    expect(wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(true)
-    expect(wrapper.find({ name: 'LessonListItem' }).exists()).toBe(false)
+    expect($wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(true)
+    expect($wrapper.find({ name: 'LessonListItem' }).exists()).toBe(false)
 
     lessons.push(fakeItem1, fakeItem2)
-    wrapper.setProps({ isLoading: false })
+    $wrapper.setProps({ isLoading: false })
 
-    const $lessons = wrapper.findAll({ name: 'LessonListItem' })
+    const $lessons = $wrapper.findAll({ name: 'LessonListItem' })
 
-    expect(wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
+    expect($wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
     expect($lessons.length).toBe(2)
     expect($lessons.at(0).props('lesson')).toBe(fakeItem1)
     expect($lessons.at(1).props('lesson')).toBe(fakeItem2)
