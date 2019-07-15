@@ -4,10 +4,10 @@ import { FAILED_REFRESH_DOCUMENTS, FINISHED_REFRESH_DOCUMENTS, STARTED_REFRESH_D
 import documentsResource from '@/documents/resources/documentsResource'
 
 export default {
-  [GET_DOCUMENTS]: ({ commit }) =>
+  [GET_DOCUMENTS]: ({ commit }, lessonId) =>
     new Promise((resolve, reject) => {
       commit(STARTED_REFRESH_DOCUMENTS)
-      documentsResource.getAll()
+      documentsResource.getFromLesson(lessonId)
         .then(items => {
           commit(FINISHED_REFRESH_DOCUMENTS, items)
           resolve(items)

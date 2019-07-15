@@ -1,6 +1,5 @@
 <template>
-  <component
-    v-bind:is="presentational"
+  <DocumentsCards
     :documents="documents"
     :download="download"
     :isLoading="isLoading"
@@ -11,7 +10,6 @@
 import { mapActions, mapState } from 'vuex'
 import { DOWNLOAD_DOCUMENT, GET_DOCUMENTS } from '@/documents/actions/documentActionTypes'
 import { DOCUMENTS_MODULE } from '@/documents/store/documentsModules'
-import DocumentsCards from '@/documents/components/presentationals/DocumentsCards'
 
 export default {
   name: 'DocumentsContainer',
@@ -19,10 +17,6 @@ export default {
     lessonId: {
       required: true,
       type: Number
-    },
-    presentational: {
-      required: false,
-      default: () => DocumentsCards
     }
   },
   computed: {
@@ -32,8 +26,11 @@ export default {
     })
   },
   methods: {
+    refresh() {
+      this.getDocuments(this.lessonId)
+    },
     ...mapActions(DOCUMENTS_MODULE, {
-      refresh: GET_DOCUMENTS,
+      getDocuments: GET_DOCUMENTS,
       download: DOWNLOAD_DOCUMENT
     })
   }
