@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LessonListItem should match snapshot 1`] = `
-<div role="listitem">
-  <div class="v-list__tile v-list__tile--avatar theme--light">
+<div role="listitem"><a class="v-list__tile v-list__tile--link v-list__tile--avatar theme--light">
     <div class="v-list__tile__avatar">
       <div class="v-avatar" style="height: 40px; width: 40px;"></div>
     </div>
@@ -11,6 +10,5 @@ exports[`LessonListItem should match snapshot 1`] = `
       <div class="v-list__tile__sub-title">fake description</div>
     </div>
     <lessondialog-stub lesson="[object Object]"></lessondialog-stub>
-  </div>
-</div>
+  </a></div>
 `;

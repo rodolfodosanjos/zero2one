@@ -4,7 +4,7 @@ exports[`MessagesList should match snapshot 1`] = `
 <v-container-stub tag="div" grid-list-md="" text-xs-center="">
   <!---->
   <v-layout-stub tag="div" row="">
-    <v-flex-stub tag="div" xs12="" sm6="" offset-sm3="">
+    <v-flex-stub tag="div">
       <v-card-stub tag="div">
         <v-list-stub twoline="true"></v-list-stub>
       </v-card-stub>

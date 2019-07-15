@@ -14,26 +14,23 @@ import LessonContent from '@/lessons/components/presentationals/LessonContent'
 
 export default {
   name: 'LessonDialog',
-  props: {
-    lesson: {
-      required: true,
-      type: Object
-    }
-  },
   components: {
     LessonContent
   },
   data () {
     return {
-      isOpen: false
+      isOpen: false,
+      lesson: {}
     }
   },
   methods: {
-    open() {
+    open(lesson) {
+      this.lesson = lesson
       this.isOpen = true
     },
     close() {
       this.isOpen = false
+      this.lesson = {}
     }
   }
 }

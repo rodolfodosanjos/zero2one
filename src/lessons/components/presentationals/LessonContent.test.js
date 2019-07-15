@@ -24,11 +24,14 @@ describe('LessonContent', () => {
       lesson: fakeLesson
     })
 
+    expect($wrapper.text()).toContain(fakeLesson.name)
+
     const $DocumentsContainer = $wrapper.find( { name: 'DocumentsContainer' } )
     expect($DocumentsContainer.props('lessonId')).toBe(fakeLesson.id)
 
     const $MessagesContainer = $wrapper.find( { name: 'MessagesContainer' } )
     expect($MessagesContainer.props('lessonId')).toBe(fakeLesson.id)
+
   })
 
 })

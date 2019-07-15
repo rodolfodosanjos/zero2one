@@ -1,10 +1,15 @@
 <template>
-  <div>
-    <DocumentsContainer
-      :lessonId="lesson.id" />
+  <v-container>
+    <div>
+      <span class="headline">{{lesson.name}}</span>
+    </div>
+    <span class="title">Mensagens</span>
     <MessagesContainer
       :lessonId="lesson.id" />
-  </div>
+    <span class="title">Documentos</span>
+    <DocumentsContainer
+      :lessonId="lesson.id" />
+  </v-container>
 </template>
 
 <script>

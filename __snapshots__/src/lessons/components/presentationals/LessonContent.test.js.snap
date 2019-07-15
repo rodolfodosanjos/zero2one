@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LessonContent should match snapshot 1`] = `
-<div>
+<v-container-stub tag="div">
+  <div><span class="headline">fake name</span></div> <span class="title">Mensagens</span>
+  <messagescontainer-stub lessonid="1"></messagescontainer-stub> <span class="title">Documentos</span>
   <documentscontainer-stub lessonid="1"></documentscontainer-stub>
-  <messagescontainer-stub lessonid="1"></messagescontainer-stub>
-</div>
+</v-container-stub>
 `;
