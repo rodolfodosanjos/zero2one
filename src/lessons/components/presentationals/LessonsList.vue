@@ -17,9 +17,10 @@
         <v-card>
           <v-list two-line>
             <LessonListItem
-              v-for="lesson in lessons"
+              v-for="(lesson, $index) in lessons"
               :key="lesson.id"
-              :lesson="lesson" />
+              :lesson="lesson"
+              :lessonIndex="$index" />
           </v-list>
         </v-card>
       </v-flex>

@@ -16,7 +16,7 @@ export default {
   props: {
     lessonId: {
       required: true,
-      type: Number
+      type: String
     }
   },
   components: {
