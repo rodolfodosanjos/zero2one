@@ -3,7 +3,8 @@ import LessonListItem from './LessonListItem'
 
 describe('LessonListItem', () => {
   const createComponent = props => mount(LessonListItem, {
-    propsData: props
+    propsData: props,
+    stubs: [ 'LessonDialog' ]
   })
 
   const fakeLesson = {
@@ -18,12 +19,12 @@ describe('LessonListItem', () => {
   })
 
   it('should show all infos', () => {
-    const wrapper = createComponent({
+    const $wrapper = createComponent({
       lesson: fakeLesson
     })
 
-    expect(wrapper.text()).toContain(fakeLesson.name)
-    expect(wrapper.text()).toContain(fakeLesson.description)
+    expect($wrapper.text()).toContain(fakeLesson.name)
+    expect($wrapper.text()).toContain(fakeLesson.description)
   })
 
 })

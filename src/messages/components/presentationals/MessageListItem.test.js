@@ -19,13 +19,13 @@ describe('MessageListItem', () => {
   })
 
   it('should show all infos', () => {
-    const wrapper = createComponent({
+    const $wrapper = createComponent({
       message: fakeMessage
     })
 
-    expect(wrapper.text()).toContain(fakeMessage.title)
-    expect(wrapper.text()).toContain(fakeMessage.message)
-    expect(wrapper.find({ name: 'v-img' }).props('src')).toBe(fakeMessage.avatar)
+    expect($wrapper.text()).toContain(fakeMessage.title)
+    expect($wrapper.text()).toContain(fakeMessage.message)
+    expect($wrapper.find({ name: 'v-img' }).props('src')).toBe(fakeMessage.avatar)
   })
 
 })

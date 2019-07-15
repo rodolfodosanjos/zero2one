@@ -1,5 +1,6 @@
 <template>
-  <DocumentsCards
+  <component
+    v-bind:is="presentational"
     :documents="documents"
     :download="download"
     :isLoading="isLoading"
@@ -14,8 +15,15 @@ import DocumentsCards from '@/documents/components/presentationals/DocumentsCard
 
 export default {
   name: 'DocumentsContainer',
-  components: {
-    DocumentsCards
+  props: {
+    lessonId: {
+      required: true,
+      type: Number
+    },
+    presentational: {
+      required: false,
+      default: () => DocumentsCards
+    }
   },
   computed: {
     ...mapState({

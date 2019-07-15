@@ -10,7 +10,6 @@ describe('DocumentsCards', () => {
     expect(createComponent({
       documents: [],
       isLoading: false,
-      refresh: jest.fn(),
       download: jest.fn()
     })).toMatchSnapshot()
   })
@@ -26,7 +25,7 @@ describe('DocumentsCards', () => {
     const refresh = jest.fn()
     const download = jest.fn()
 
-    const wrapper = createComponent({
+    const $wrapper = createComponent({
       documents,
       isLoading: false,
       refresh,
@@ -35,17 +34,17 @@ describe('DocumentsCards', () => {
 
     expect(refresh.mock.calls.length).toBe(1)
 
-    wrapper.setProps({ isLoading: true })
+    $wrapper.setProps({ isLoading: true })
 
-    expect(wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(true)
-    expect(wrapper.find({ name: 'DocumentCard' }).exists()).toBe(false)
+    expect($wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(true)
+    expect($wrapper.find({ name: 'DocumentCard' }).exists()).toBe(false)
 
     documents.push(fakeDocument1, fakeDocument2)
-    wrapper.setProps({ isLoading: false })
+    $wrapper.setProps({ isLoading: false })
 
-    const $documents = wrapper.findAll({ name: 'DocumentCard' })
+    const $documents = $wrapper.findAll({ name: 'DocumentCard' })
 
-    expect(wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
+    expect($wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
     expect($documents.length).toBe(2)
     expect($documents.at(0).props('download')).toBe(download)
     expect($documents.at(1).props('download')).toBe(download)
