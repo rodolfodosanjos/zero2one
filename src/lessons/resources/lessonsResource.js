@@ -1,6 +1,9 @@
+import moment from 'moment'
+
 const lessonsExample = [ {
-  id: 1,
+  id: '1',
   name: 'Aula 1 - Introdução',
+  date: moment(),
   description: `
     **Introdução**
     * Perfil de programador
@@ -20,8 +23,9 @@ const lessonsExample = [ {
     * Head
     * HTML5`
 }, {
-  id: 2,
+  id: '2',
   name: 'Aula 2 - CSS',
+  date: moment(),
   description: `
     **CSS**
     * Conceito

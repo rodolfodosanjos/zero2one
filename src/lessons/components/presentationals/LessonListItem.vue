@@ -4,11 +4,16 @@
     avatar
     @click="openLesson()">
     <v-list-tile-avatar>
+      <v-avatar
+        size="40"
+        color="green lighten-1 white--text">
+        {{ lessonIndex + 1 }}
+      </v-avatar>
     </v-list-tile-avatar>
 
     <v-list-tile-content>
       <v-list-tile-title v-html="lesson.name" />
-      <v-list-tile-sub-title v-html="lesson.description" />
+      <v-list-tile-sub-title v-html="formattedLessonDate" />
     </v-list-tile-content>
 
     <LessonDialog
@@ -18,6 +23,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import LessonDialog from '@/lessons/pages/LessonDialog'
 
 export default {
@@ -26,10 +32,20 @@ export default {
     lesson: {
       required: true,
       type: Object
+    },
+    lessonIndex: {
+      required: true,
+      type: Number
     }
   },
   components: {
     LessonDialog
+  },
+  computed: {
+    formattedLessonDate() {
+      const DATE_FORMAT = 'DD/MM/YYYY'
+      return moment(this.lesson.date).format(DATE_FORMAT)
+    }
   },
   methods: {
     openLesson() {

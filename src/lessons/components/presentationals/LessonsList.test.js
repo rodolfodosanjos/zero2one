@@ -45,7 +45,9 @@ describe('LessonsList', () => {
     expect($wrapper.find({ name: 'v-progress-circular' }).exists()).toBe(false)
     expect($lessons.length).toBe(2)
     expect($lessons.at(0).props('lesson')).toBe(fakeItem1)
+    expect($lessons.at(0).props('lessonIndex')).toBe(0)
     expect($lessons.at(1).props('lesson')).toBe(fakeItem2)
+    expect($lessons.at(1).props('lessonIndex')).toBe(1)
   })
 
 })
