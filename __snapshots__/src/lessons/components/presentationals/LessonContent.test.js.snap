@@ -2,6 +2,7 @@
 
 exports[`LessonContent should match snapshot 1`] = `
 <div>
-  <documentscontainer-stub lessonid="1" presentational="[object Object]"></documentscontainer-stub>
+  <documentscontainer-stub lessonid="1"></documentscontainer-stub>
+  <messagescontainer-stub lessonid="1"></messagescontainer-stub>
 </div>
 `;

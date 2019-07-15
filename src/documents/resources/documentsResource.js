@@ -15,6 +15,6 @@ const exampleDocs = [ {
 } ]
 
 export default {
-  getAll: () =>
+  getFromLesson: () =>
     new Promise(resolve => window.setTimeout(() => resolve(exampleDocs)), 2000)
 }

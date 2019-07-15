@@ -12,10 +12,6 @@ export default new Router({
     name: 'LessonsPage',
     component: LessonsPage
   }, {
-    path: '/messages',
-    name: 'MessagesPage',
-    component: () => import('@/messages/pages/MessagesPage')
-  }, {
     path: '/user',
     name: 'UserPage',
     component: () => import('@/users/pages/UserPage')

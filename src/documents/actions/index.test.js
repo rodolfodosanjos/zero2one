@@ -12,17 +12,22 @@ describe('documents actions', () => {
 
   describe('GET_DOCUMENTS', () => {
 
+    const fakeLesson = {
+      id: 123
+    }
+
     it('should call FINISHED_REFRESH_DOCUMENTS DOCUMENTS on successful get', (done, fail) => {
       const commit = jest.fn()
       const fakeItems = [ { name: 'fake item' } ]
       let promiseResolver
-      documentsResource.getAll = jest.fn().mockImplementation(() => new Promise(resolve => promiseResolver = resolve))
+      documentsResource.getFromLesson = jest.fn().mockImplementation(() => new Promise(resolve => promiseResolver = resolve))
 
-      actions[GET_DOCUMENTS]({ commit })
+      actions[GET_DOCUMENTS]({ commit }, fakeLesson.id)
         .then(items => {
           expect(commit.mock.calls.length).toBe(2)
           expect(commit.mock.calls[1][0]).toBe(FINISHED_REFRESH_DOCUMENTS)
           expect(commit.mock.calls[1][1]).toBe(fakeItems)
+          expect(documentsResource.getFromLesson.mock.calls[0][0]).toBe(fakeLesson.id)
 
           expect(items).toBe(fakeItems)
           done()
@@ -39,14 +44,15 @@ describe('documents actions', () => {
       const commit = jest.fn()
       const fakeError = new Error('fake error')
       let promiseRejector
-      documentsResource.getAll = jest.fn().mockImplementation(() => new Promise((resolve, reject) => promiseRejector = reject))
+      documentsResource.getFromLesson = jest.fn().mockImplementation(() => new Promise((resolve, reject) => promiseRejector = reject))
 
-      actions[GET_DOCUMENTS]({ commit })
+      actions[GET_DOCUMENTS]({ commit }, fakeLesson.id)
         .then(fail)
         .catch(error => {
           expect(commit.mock.calls.length).toBe(2)
           expect(commit.mock.calls[1][0]).toBe(FAILED_REFRESH_DOCUMENTS)
           expect(commit.mock.calls[1][1]).toBe(fakeError)
+          expect(documentsResource.getFromLesson.mock.calls[0][0]).toBe(fakeLesson.id)
 
           expect(error).toBe(fakeError)
           done()

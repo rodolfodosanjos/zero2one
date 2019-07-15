@@ -2,11 +2,14 @@
   <div>
     <DocumentsContainer
       :lessonId="lesson.id" />
+    <MessagesContainer
+      :lessonId="lesson.id" />
   </div>
 </template>
 
 <script>
 import DocumentsContainer from '@/documents/components/containers/DocumentsContainer'
+import MessagesContainer from '@/messages/components/containers/MessagesContainer'
 
 export default {
   name: 'LessonContent',
@@ -17,7 +20,8 @@ export default {
     }
   },
   components: {
-    DocumentsContainer
+    DocumentsContainer,
+    MessagesContainer
   }
 }
 </script>

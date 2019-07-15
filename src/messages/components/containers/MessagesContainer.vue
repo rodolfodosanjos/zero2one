@@ -13,6 +13,12 @@ import MessagesList from '@/messages/components/presentationals/MessagesList'
 
 export default {
   name: 'MessagesContainer',
+  props: {
+    lessonId: {
+      required: true,
+      type: Number
+    }
+  },
   components: {
     MessagesList
   },
@@ -23,8 +29,11 @@ export default {
     })
   },
   methods: {
+    refresh() {
+      this.getLessonMessage(this.lessonId)
+    },
     ...mapActions(MESSAGES_MODULE, {
-      refresh: GET_MESSAGES
+      getLessonMessage: GET_MESSAGES
     })
   }
 }
