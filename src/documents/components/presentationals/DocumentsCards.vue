@@ -19,8 +19,7 @@
       <v-flex
         v-for="document in documents"
         :key="document.id"
-        align-self-center
-        xs12 sm6 lg3>
+        align-self-center>
         <DocumentCard
           :document="document"
           :download="download" />

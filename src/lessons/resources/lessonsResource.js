@@ -1,6 +1,6 @@
 const lessonsExample = [ {
   id: 1,
-  name: 'Aula 1 - Introduction',
+  name: 'Aula 1 - Introdução',
   description: `
     **Introdução**
     * Perfil de programador

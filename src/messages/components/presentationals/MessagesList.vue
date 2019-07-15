@@ -14,7 +14,7 @@
     <v-layout
       v-if="!isLoading"
       row>
-      <v-flex xs12 sm6 offset-sm3>
+      <v-flex>
         <v-card>
           <v-list two-line>
             <MessageListItem

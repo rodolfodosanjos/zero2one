@@ -10,7 +10,7 @@
 import { mapActions, mapState } from 'vuex'
 import { DOWNLOAD_DOCUMENT, GET_DOCUMENTS } from '@/documents/actions/documentActionTypes'
 import { DOCUMENTS_MODULE } from '@/documents/store/documentsModules'
-
+import DocumentsCards from '@/documents/components/presentationals/DocumentsCards'
 export default {
   name: 'DocumentsContainer',
   props: {
@@ -18,6 +18,9 @@ export default {
       required: true,
       type: Number
     }
+  },
+  components: {
+    DocumentsCards
   },
   computed: {
     ...mapState({

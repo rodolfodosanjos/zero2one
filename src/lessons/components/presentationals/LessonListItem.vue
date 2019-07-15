@@ -1,7 +1,8 @@
 <template>
   <v-list-tile
     :key="lesson.title"
-    avatar>
+    avatar
+    @click="openLesson()">
     <v-list-tile-avatar>
     </v-list-tile-avatar>
 
@@ -30,9 +31,9 @@ export default {
   components: {
     LessonDialog
   },
-  mounted() {
-    if (this.lesson.id === 1) {
-      this.$refs.LessonDialog.open()
+  methods: {
+    openLesson() {
+      this.$refs.LessonDialog.open(this.lesson)
     }
   }
 }
