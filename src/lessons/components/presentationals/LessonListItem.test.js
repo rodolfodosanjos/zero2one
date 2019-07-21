@@ -10,7 +10,7 @@ describe('LessonListItem', () => {
 
   const fakeLesson = {
     name: 'fake name',
-    date: moment(),
+    date: moment('2019-07-10'),
     description: 'fake description'
   }
 

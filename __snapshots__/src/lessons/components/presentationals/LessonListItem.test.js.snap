@@ -11,7 +11,7 @@ exports[`LessonListItem should match snapshot 1`] = `
     </div>
     <div class="v-list__tile__content">
       <div class="v-list__tile__title">fake name</div>
-      <div class="v-list__tile__sub-title">14/07/2019</div>
+      <div class="v-list__tile__sub-title">10/07/2019</div>
     </div>
     <lessondialog-stub lesson="[object Object]"></lessondialog-stub>
   </a></div>

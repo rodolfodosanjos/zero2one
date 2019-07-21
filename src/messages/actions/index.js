@@ -3,10 +3,10 @@ import { FAILED_REFRESH_MESSAGES, FINISHED_REFRESH_MESSAGES, STARTED_REFRESH_MES
 import messagesResource from '@/messages/resources/messagesResource'
 
 export default {
-  [GET_MESSAGES]: ({ commit }) =>
+  [GET_MESSAGES]: ({ commit }, lessonId) =>
     new Promise((resolve, reject) => {
       commit(STARTED_REFRESH_MESSAGES)
-      messagesResource.getAll()
+      messagesResource.getFromLesson(lessonId)
         .then(messages => {
           commit(FINISHED_REFRESH_MESSAGES, messages)
           resolve(messages)
