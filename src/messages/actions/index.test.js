@@ -14,7 +14,7 @@ describe('messages actions', () => {
       const commit = jest.fn()
       const fakeItems = [ { name: 'fake item' } ]
       let promiseResolver
-      messagesResource.getAll = jest.fn().mockImplementation(() => new Promise(resolve => promiseResolver = resolve))
+      messagesResource.getFromLesson = jest.fn().mockImplementation(() => new Promise(resolve => promiseResolver = resolve))
 
       actions[GET_MESSAGES]({ commit })
         .then(items => {
@@ -37,7 +37,7 @@ describe('messages actions', () => {
       const commit = jest.fn()
       const fakeError = new Error('fake error')
       let promiseRejector
-      messagesResource.getAll = jest.fn().mockImplementation(() => new Promise((resolve, reject) => promiseRejector = reject))
+      messagesResource.getFromLesson = jest.fn().mockImplementation(() => new Promise((resolve, reject) => promiseRejector = reject))
 
       actions[GET_MESSAGES]({ commit })
         .then(fail)

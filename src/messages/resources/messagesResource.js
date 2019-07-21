@@ -15,6 +15,6 @@ const exampleMsgs = [ {
 } ]
 
 export default {
-  getAll: () =>
+  getFromLesson: () =>
     new Promise(resolve => window.setTimeout(() => resolve(exampleMsgs)), 2000)
 }
